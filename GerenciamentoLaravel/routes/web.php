@@ -18,7 +18,9 @@ Route::get('/', function () {
 });
 
 Route::get('socios', 'SociosController@index');
+
 Route::get('cidades', 'CidadesController@index');
+Route::get('cidades/create', 'CidadesController@create');
 
 Auth::routes();
 

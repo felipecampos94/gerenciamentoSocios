@@ -10,6 +10,10 @@ class CidadesController extends Controller
     //
     public function index(){
         $cidades = Cidade::all();
-        return view('cidades', ['cidades' =>$cidades]);
+        return view('cidades.index', ['cidades' =>$cidades]);
+    }
+
+    public function create(){
+        return view('cidades.create');
     }
 }
