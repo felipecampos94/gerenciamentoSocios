@@ -19,3 +19,7 @@ Route::get('/', function () {
 
 Route::get('socios', 'SociosController@index');
 Route::get('cidades', 'CidadesController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
