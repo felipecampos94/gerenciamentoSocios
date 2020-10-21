@@ -8,4 +8,5 @@ class Cidade extends Model
 {
     //
     protected $table = "cidades";
+    protected $fillable = ['nome', 'siglaEstado', 'cep'];
 }

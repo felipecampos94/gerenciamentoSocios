@@ -21,6 +21,7 @@ Route::get('socios', 'SociosController@index');
 
 Route::get('cidades', 'CidadesController@index');
 Route::get('cidades/create', 'CidadesController@create');
+Route::post('cidades/store', 'CidadesController@store');
 
 Auth::routes();
 
