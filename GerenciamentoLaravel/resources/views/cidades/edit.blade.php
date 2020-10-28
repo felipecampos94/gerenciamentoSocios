@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('content')
-    <h3>Nova Cidade</h3>
+    <h3>Editando Cidade: {{$cidade->nome}}</h3>
 
     @if($errors->any())
         <ul class="alert alert-danger">
@@ -11,23 +11,23 @@
         </ul>
     @endif
 
-    {!! Form::open(['route'=>'cidades.store']) !!}
+    {!! Form::open(['route'=> ["cidades.update", 'id'=>$cidade->id], 'method'=>'put']) !!}
 
     <div class="form-group">
         {!! Form::label('nome', 'Nome:') !!}
-        {!! Form::text('nome', null, ['class'=>'form-control','required']) !!}
+        {!! Form::text('nome', $cidade->nome, ['class'=>'form-control','required']) !!}
     </div>
 
     <div class="form-group">
         {!! Form::label('siglaEstado', 'Sigla Estado:') !!}
-        {!! Form::text('siglaEstado', null, ['class'=>'form-control','required']) !!}
+        {!! Form::text('siglaEstado', $cidade->siglaEstado, ['class'=>'form-control','required']) !!}
     </div>
     <div class="form-group">
         {!! Form::label('cep', 'Cep:') !!}
-        {!! Form::text('cep', null, ['class'=>'form-control','required']) !!}
+        {!! Form::text('cep', $cidade->cep, ['class'=>'form-control','required']) !!}
     </div>
     <div class="form-group">
-        {!! Form::submit('Criar Cidade', ['class'=>'btn btn-primary']) !!}
+        {!! Form::submit('Editar Cidade', ['class'=>'btn btn-primary']) !!}
         {!! Form::reset('Limpar', ['class'=>'btn btn-default']) !!}
     </div>
 
