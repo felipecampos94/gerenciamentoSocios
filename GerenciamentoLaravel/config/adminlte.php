@@ -242,6 +242,11 @@ return [
             'url' => 'socios',
             'icon' => 'fas fa-fw fa-users',
         ],
+        [
+            'text' => 'Dependentes',
+            'url' => 'dependentes',
+            'icon' => 'fas fa-fw fa-users',
+        ],
 //        [
 //            'text' => 'search',
 //            'search' => true,

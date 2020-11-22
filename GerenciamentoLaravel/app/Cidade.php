@@ -14,4 +14,9 @@ class Cidade extends Model
     {
         return $this->hasMany("App\Socio");
     }
+
+    public function dependentes()
+    {
+        return $this->hasMany("App\Dependente");
+    }
 }

@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('content')
-    <h3>Novo Sócio</h3>
+    <h3>Novo Dependente</h3>
 
     @if($errors->any())
         <ul class="alert alert-danger">
@@ -11,7 +11,7 @@
         </ul>
     @endif
 
-    {!! Form::open(['route'=>'socios.store']) !!}
+    {!! Form::open(['route'=>'dependentes.store']) !!}
 
     <div class="form-group">
         {!! Form::label('nome', 'Nome:') !!}
@@ -30,14 +30,17 @@
                         null, ['class'=>'form-control', 'required']) !!}
     </div>
 
+<div class="form-group">
+        {!! Form::label('socio_id', 'Sócio:') !!}
+        {!! Form::select('socio_id',
+                        \App\Socio::orderBy('nome')->pluck('nome', 'id')->toArray(),
+                        null, ['class'=>'form-control', 'required']) !!}
+    </div>
+
+
     <div class="form-group">
         {!! Form::label('dataNascimento', 'Data Nascimento:') !!}
         {!! Form::date('dataNascimento', null, ['class'=>'form-control','required']) !!}
-    </div>
-
-    <div class="form-group">
-        {!! Form::label('email', 'Email:') !!}
-        {!! Form::email('email', null, ['class'=>'form-control','required']) !!}
     </div>
 
     <div class="form-group">
@@ -46,17 +49,7 @@
     </div>
 
     <div class="form-group">
-        {!! Form::label('valor', 'Valor:') !!}
-        {!! Form::number('valor', null, ['class'=>'form-control','required']) !!}
-    </div>
-
-    <div class="form-group">
-        {!! Form::label('ativo', 'Ativo:') !!}
-        {!! Form::checkbox('ativo', null, true, ['class'=>'form-control','required']) !!}
-    </div>
-
-    <div class="form-group">
-        {!! Form::submit('Criar Socio', ['class'=>'btn btn-primary']) !!}
+        {!! Form::submit('Criar Dependente', ['class'=>'btn btn-primary']) !!}
         {!! Form::reset('Limpar', ['class'=>'btn btn-default']) !!}
     </div>
 

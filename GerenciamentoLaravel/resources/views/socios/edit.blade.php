@@ -37,7 +37,7 @@
 
     <div class="form-group">
         {!! Form::label('email', 'Email:') !!}
-        {!! Form::text('email', $socio->email, ['class'=>'form-control','required']) !!}
+        {!! Form::email('email', $socio->email, ['class'=>'form-control','required']) !!}
     </div>
 
     <div class="form-group">
@@ -47,12 +47,12 @@
 
     <div class="form-group">
         {!! Form::label('valor', 'Valor:') !!}
-        {!! Form::text('valor', $socio->valor, ['class'=>'form-control','required']) !!}
+        {!! Form::number('valor', $socio->valor, ['class'=>'form-control','required']) !!}
     </div>
 
     <div class="form-group">
         {!! Form::label('ativo', 'Ativo:') !!}
-        {!! Form::text('ativo', $socio->ativo, ['class'=>'form-control','required']) !!}
+        {!! Form::checkbox('ativo', $socio->ativo, ['class'=>'form-control','required']) !!}
     </div>
 
 

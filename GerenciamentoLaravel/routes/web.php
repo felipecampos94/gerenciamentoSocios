@@ -42,6 +42,17 @@ Route::group(['prefix' => 'socios', 'where' => ['id' => '[0-9]+']], function () 
 
 });
 
+Route::group(['prefix' => 'dependentes', 'where' => ['id' => '[0-9]+']], function () {
+
+    Route::get('',              ['as' => 'dependentes',             'uses' => 'DependentesController@index']);
+    Route::get('create',        ['as' => 'dependentes.create',      'uses' => 'DependentesController@create']);
+    Route::get('{id}/destroy',  ['as' => 'dependentes.destroy',     'uses' => 'DependentesController@destroy']);
+    Route::get('{id}/edit',     ['as' => 'dependentes.edit',        'uses' => 'DependentesController@edit']);
+    Route::put('{id}/update',   ['as' => 'dependentes.update',      'uses' => 'DependentesController@update']);
+    Route::post('store',        ['as' => 'dependentes.store',       'uses' => 'DependentesController@store']);
+
+});
+
 
 Auth::routes();
 
