@@ -233,8 +233,13 @@ return [
     'menu' => [
         ['header' => 'CIDADES'],
         [
-            'text' => 'Listagem',
+            'text' => 'Cidades',
             'url' => 'cidades',
+            'icon' => 'fas fa-fw fa-flag',
+        ],
+        [
+            'text' => 'Sócios',
+            'url' => 'socios',
             'icon' => 'fas fa-fw fa-users',
         ],
 //        [

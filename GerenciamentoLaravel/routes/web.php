@@ -31,6 +31,18 @@ Route::group(['prefix' => 'cidades', 'where' => ['id' => '[0-9]+']], function ()
 });
 
 
+Route::group(['prefix' => 'socios', 'where' => ['id' => '[0-9]+']], function () {
+
+    Route::get('',              ['as' => 'socios',             'uses' => 'SociosController@index']);
+    Route::get('create',        ['as' => 'socios.create',      'uses' => 'SociosController@create']);
+    Route::get('{id}/destroy',  ['as' => 'socios.destroy',     'uses' => 'SociosController@destroy']);
+    Route::get('{id}/edit',     ['as' => 'socios.edit',        'uses' => 'SociosController@edit']);
+    Route::put('{id}/update',   ['as' => 'socios.update',      'uses' => 'SociosController@update']);
+    Route::post('store',        ['as' => 'socios.store',       'uses' => 'SociosController@store']);
+
+});
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

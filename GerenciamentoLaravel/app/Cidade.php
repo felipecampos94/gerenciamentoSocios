@@ -9,4 +9,9 @@ class Cidade extends Model
     //
     protected $table = "cidades";
     protected $fillable = ['nome', 'siglaEstado', 'cep'];
+
+    public function socios()
+    {
+        return $this->hasMany("App\Socio");
+    }
 }
