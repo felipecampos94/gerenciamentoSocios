@@ -247,6 +247,16 @@ return [
             'url' => 'dependentes',
             'icon' => 'fas fa-fw fa-users',
         ],
+        [
+            'text' => 'Formas de Pagamento',
+            'url' => 'formas',
+            'icon' => 'fas fa-fw fa-users',
+        ],
+        [
+            'text' => 'Parcelas',
+            'url' => 'parcelas',
+            'icon' => 'fas fa-fw fa-users',
+        ],
 //        [
 //            'text' => 'search',
 //            'search' => true,

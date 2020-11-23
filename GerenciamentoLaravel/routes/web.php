@@ -53,6 +53,28 @@ Route::group(['prefix' => 'dependentes', 'where' => ['id' => '[0-9]+']], functio
 
 });
 
+Route::group(['prefix' => 'formas', 'where' => ['id' => '[0-9]+']], function () {
+
+    Route::get('',              ['as' => 'formas',             'uses' => 'FormasController@index']);
+    Route::get('create',        ['as' => 'formas.create',      'uses' => 'FormasController@create']);
+    Route::get('{id}/destroy',  ['as' => 'formas.destroy',     'uses' => 'FormasController@destroy']);
+    Route::get('{id}/edit',     ['as' => 'formas.edit',        'uses' => 'FormasController@edit']);
+    Route::put('{id}/update',   ['as' => 'formas.update',      'uses' => 'FormasController@update']);
+    Route::post('store',        ['as' => 'formas.store',       'uses' => 'FormasController@store']);
+
+});
+
+Route::group(['prefix' => 'parcelas', 'where' => ['id' => '[0-9]+']], function () {
+
+    Route::get('',              ['as' => 'parcelas',             'uses' => 'ParcelasController@index']);
+    Route::get('create',        ['as' => 'parcelas.create',      'uses' => 'ParcelasController@create']);
+    Route::get('{id}/destroy',  ['as' => 'parcelas.destroy',     'uses' => 'ParcelasController@destroy']);
+    Route::get('{id}/edit',     ['as' => 'parcelas.edit',        'uses' => 'ParcelasController@edit']);
+    Route::put('{id}/update',   ['as' => 'parcelas.update',      'uses' => 'ParcelasController@update']);
+    Route::post('store',        ['as' => 'parcelas.store',       'uses' => 'ParcelasController@store']);
+
+});
+
 
 Auth::routes();
 
