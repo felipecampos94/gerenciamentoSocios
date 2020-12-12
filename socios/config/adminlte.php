@@ -234,11 +234,6 @@ return [
         ['header' => 'MENU'],
 
         [
-            'text' => 'Meu Perfil',
-            'url' => '#',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
             'text' => 'CTG',
             'url' => 'ctgs',
             'icon' => 'fas fa-fw fa-flag',
