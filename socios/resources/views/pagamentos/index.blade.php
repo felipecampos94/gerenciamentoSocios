@@ -42,7 +42,7 @@
                         @endforeach
                     </td>
                     <td>
-                        <a href="{{route('pagamentos.edit', ['id'=>$pagamento->id])}}" class="btn-sm btn-success">Editar</a>
+                        <a href="{{route('pagamentos.edit', ['id'=>\Crypt::encrypt($pagamento->id)])}}" class="btn-sm btn-success">Editar</a>
                         <a href="#" onclick="return ConfirmaExclusao({{$pagamento->id}})" class="btn-sm btn-danger">Remover</a>
                     </td>
                 </tr>

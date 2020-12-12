@@ -63,10 +63,10 @@ class SociosController extends Controller
     }
 
 
-    public function edit($id)
+    public function edit(Request $request)
     {
 
-        $socio = Socio::find($id);
+        $socio = Socio::find(\Crypt::decrypt($request->get('id')));
         return view('socios.edit', compact('socio'));
     }
 

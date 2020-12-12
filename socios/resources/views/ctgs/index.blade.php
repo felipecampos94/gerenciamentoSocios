@@ -37,7 +37,7 @@
                 <td>{{$ctg->cidade->nome}}</td>
 
                 <td>
-                    <a href="{{ route('ctgs.edit', ['id'=>$ctg->id]) }}" class="btn-sm btn-success">Editar</a>
+                    <a href="{{ route('ctgs.edit', ['id'=>\Crypt::encrypt($ctg->id)]) }}" class="btn-sm btn-success">Editar</a>
                     <a href="#" onclick="return ConfirmaExclusao({{$ctg->id}})" class="btn-sm btn-danger">Remover</a>
                 </td>
             </tr>

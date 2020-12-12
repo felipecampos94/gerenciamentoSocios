@@ -44,9 +44,9 @@ class CtgsController extends Controller
         return $ret;
     }
 
-    public function edit($id)
+    public function edit(Request $request)
     {
-        $ctg = Ctg::find($id);
+        $ctg = Ctg::find(\Crypt::decrypt($request->get('id')));
         return view('ctgs.edit', compact('ctg'));
     }
 

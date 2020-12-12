@@ -45,9 +45,9 @@ class DependentesController extends Controller
         return $ret;
     }
 
-    public function edit($id)
+    public function edit(Request $request)
     {
-        $dependente = Dependente::find($id);
+        $dependente = Dependente::find(\Crypt::decrypt($request->get('id')));
         return view('dependentes.edit', compact('dependente'));
     }
 

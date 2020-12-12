@@ -44,7 +44,7 @@
                     </td>
 
                     <td>
-                        <a href="{{route('socios.edit', ['id'=>$socio->id])}}" class="btn-sm btn-success">Editar</a>
+                        <a href="{{route('socios.edit', ['id'=>\Crypt::encrypt($socio->id)])}}" class="btn-sm btn-success">Editar</a>
                         <a href="#" onclick="return ConfirmaExclusao({{$socio->id}})" class="btn-sm btn-danger">Remover</a>
                     </td>
                 </tr>

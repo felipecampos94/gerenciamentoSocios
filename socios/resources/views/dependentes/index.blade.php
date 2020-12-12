@@ -34,7 +34,7 @@
                 <td>{{$dependente->telefone}}</td>
                 <td>{{$dependente->cidade->nome}}</td>
                 <td>
-                    <a href="{{ route('dependentes.edit', ['id'=>$dependente->id]) }}" class="btn-sm btn-success">Editar</a>
+                    <a href="{{ route('dependentes.edit', ['id'=>\Crypt::encrypt($dependente->id)]) }}" class="btn-sm btn-success">Editar</a>
                     <a href="#" onclick="return ConfirmaExclusao({{$dependente->id}})" class="btn-sm btn-danger">Remover</a>
                 </td>
             </tr>

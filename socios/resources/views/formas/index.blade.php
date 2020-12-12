@@ -26,7 +26,7 @@
             <tr>
                 <td>{{$forma->nome}}</td>
                 <td>
-                    <a href="{{ route('formas.edit', ['id'=>$forma->id]) }}" class="btn-sm btn-success">Editar</a>
+                    <a href="{{ route('formas.edit', ['id'=>\Crypt::encrypt($forma->id)]) }}" class="btn-sm btn-success">Editar</a>
                     <a href="#" onclick="return ConfirmaExclusao({{$forma->id}})" class="btn-sm btn-danger">Remover</a>
                 </td>
             </tr>

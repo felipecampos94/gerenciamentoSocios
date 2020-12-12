@@ -44,9 +44,9 @@ class CidadesController extends Controller
         return $ret;
     }
 
-    public function edit($id)
+    public function edit(Request $request)
     {
-        $cidade = Cidade::find($id);
+        $cidade = Cidade::find(\Crypt::decrypt($request->get('id')));
         return view('cidades.edit', compact('cidade'));
     }
 

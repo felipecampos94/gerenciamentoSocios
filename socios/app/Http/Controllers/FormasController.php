@@ -44,9 +44,9 @@ class FormasController extends Controller
         return $ret;
     }
 
-    public function edit($id)
+    public function edit(Request $request)
     {
-        $forma = Forma::find($id);
+        $forma = Forma::find(\Crypt::decrypt($request->get('id')));
         return view('formas.edit', compact('forma'));
     }
 

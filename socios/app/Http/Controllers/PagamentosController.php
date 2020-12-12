@@ -59,10 +59,10 @@ class PagamentosController extends Controller
     }
 
 
-    public function edit($id)
+    public function edit(Request $request)
     {
 
-        $pagamento = Pagamento::find($id);
+        $pagamento = Pagamento::find(\Crypt::decrypt($request->get('id')));
         return view('pagamentos.edit', compact('pagamento'));
     }
 
