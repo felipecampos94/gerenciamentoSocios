@@ -64,7 +64,7 @@
             <hr/>
 
             <div class="form-group">
-                {!! Form::submit('Criar Dependente', ['class'=>'btn btn-primary']) !!}
+                {!! Form::submit('Criar Sócio', ['class'=>'btn btn-primary']) !!}
             </div>
 
             {!! Form::close() !!}
