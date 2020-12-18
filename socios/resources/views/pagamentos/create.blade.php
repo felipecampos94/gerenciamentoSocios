@@ -18,7 +18,7 @@
 
             <div class="form-group">
                 {!! Form::label('dataPagamento', 'Data Pagamento:') !!}
-                {!! Form::date('dataPagamento', \Carbon\Carbon::now(new DateTimeZone('America/Sao_Paulo')), ['class'=>'form-control', 'disabled']) !!}
+                {!! Form::date('dataPagamento', \Carbon\Carbon::now(new DateTimeZone('America/Sao_Paulo')), ['class'=>'form-control']) !!}
             </div>
 
             <div class="form-group">

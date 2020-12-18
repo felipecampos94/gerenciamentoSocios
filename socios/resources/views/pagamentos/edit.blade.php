@@ -18,7 +18,7 @@
 
             <div class="form-group">
                 {!! Form::label('dataPagamento', 'Data Pagamento:') !!}
-                {!! Form::date('dataPagamento', \Carbon\Carbon::now(), ['class'=>'form-control','disabled']) !!}
+                {!! Form::date('dataPagamento', $pagamento->dataPagamento, ['class'=>'form-control','disabled']) !!}
             </div>
 
             <div class="form-group">
